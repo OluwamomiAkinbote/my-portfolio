@@ -1,25 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
 :root {
   --main-bg-color: #600060;
   --sup-bg-color: #ffecb3;
-  --main-text-color: #e5d5a9;
+  --main-text-color: #cc9f25;
   --sup-text-colour: #a932a9;
-  --accent-color: ;
+  --sup-text-two: #a014a5;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Saira Condensed", sans-serif;
 }
 
 .header {
-  background-color: #333;
-  color: white;
   background-color: var(--main-bg-color);
-  display: grid;
-  grid-template-rows: 1fr; /* Two columns: 1 for the h1, 1 for the nav */
-  align-items: center;
-  /* padding: 30px 0; */
+  color: var(--main-text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .logo {
   max-width: 20px;
   margin: 0;
+  animation: fadeIn 1s ease;
 }
+
 img {
   width: 70px;
 }
@@ -28,17 +35,20 @@ nav {
   display: flex;
   justify-content: space-around;
   background-color: var(--sup-bg-color);
+  font-size: 2rem;
   padding: 15px 0;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 12;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  animation: slideInDown 0.5s ease;
 }
 
 .links {
   display: flex;
   gap: 12px;
+  transition: transform 0.3s ease;
 }
 
 .links a {
@@ -49,4 +59,60 @@ nav {
 
 .links a:hover {
   text-decoration: underline;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: var(--sup-text-colour);
+  margin: 2px 0;
+  transition: 0.4s;
+}
+
+@media only screen and (max-width: 768px) {
+  .links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: var(--sup-bg-color);
+  }
+
+  .links.open {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .header.open {
+    height: auto;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
 }

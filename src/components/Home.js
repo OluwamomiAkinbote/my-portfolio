@@ -7,10 +7,23 @@ import "../styles/home.css";
 import hero from "../images/hero-edit.png";
 import about from "../images/about-me-edit.png";
 import realEstate from "../images/real-estate.jpg";
+import calculator from "../images/calculator.png";
+import addToCart from "../images/add-to-cart (1).png";
+
 import todo from "../images/todo.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import {
+  faPhone,
+  faEnvelope,
+  faComment,
+} from "@fortawesome/free-solid-svg-icons";
 import { faMapMarker } from "@fortawesome/free-solid-svg-icons";
+import {
+  faFacebook,
+  faGithub,
+  faInstagram,
+  faLinkedinIn,
+} from "@fortawesome/free-brands-svg-icons";
 
 const Home = () => {
   const projects = [
@@ -21,16 +34,18 @@ const Home = () => {
       technologies: ["ReactJS", "JavaScript", "HTML", "CSS3"],
     },
     {
-      title: "Todo",
-      image: todo,
-      description: "Description for Project 1",
-      technologies: ["ReactJS", "JavaScript", "HTML", "CSS3"],
+      title: "Simple Calculator",
+      image: calculator,
+      description:
+        "A stylish HTML5 calculator with JavaScript for real-time arithmetic. Enhanced by CSS, it offers a user-friendly interface for quick and efficient calculations, accessible seamlessly across various devices.",
+      technologies: ["HTML5", "JavaScript", "CSS3"],
     },
     {
       title: "Ecommerce",
-      image: todo,
-      description: "Description for Project 1",
-      technologies: ["ReactJS", "JavaScript", "HTML", "CSS3"],
+      image: addToCart,
+      description:
+        "HTML, JS, CSS3 power a dynamic e-commerce site, ensuring seamless shopping. Intuitive design, responsive layout, and Add to Cart container optimize user convenience for effortless product selection and purchase.",
+      technologies: ["JavaScript", "HTML5", "CSS3"],
     },
     {
       title: "Ecommerce",
@@ -130,8 +145,8 @@ const Home = () => {
 
         <div className="projects">
           <div className="heading-box">
-            <h2 className="headings">Featured projects</h2>
-            <Link to="/project">View Projects</Link>
+            <h2 className="headings">projects</h2>
+            <Link to="/project">View all</Link>
           </div>
 
           <div className="project-container">
@@ -148,8 +163,7 @@ const Home = () => {
 
         <div className="contact">
           <div className="heading-box">
-            <h2 className="headings">Get in touch</h2>
-            <Link to="/contact">Contact me</Link>
+            <h2 className="contact-heading">contact me</h2>
           </div>
           <div className="contact-container">
             <div className="contact-link">
@@ -164,6 +178,53 @@ const Home = () => {
                   </div>
                 </div>
               ))}
+              <div className="social-links">
+                <div className="links">
+                  <a
+                    href="https://www.linkedin.com/in/oluwamomi-akinbote"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FontAwesomeIcon icon={faLinkedinIn} />
+                  </a>
+                  <div className="links">
+                    <a
+                      href="https://wa.me/+2348149492012"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <FontAwesomeIcon icon={faComment} />
+                    </a>
+                  </div>
+                  <div className="links">
+                    <a
+                      href="https://www.facebook.com/Oluwamomiakinbote"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <FontAwesomeIcon icon={faFacebook} />
+                    </a>
+                  </div>
+                  <div className="links">
+                    <a
+                      href="https://www.instagram.com/maxonex7/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <FontAwesomeIcon icon={faInstagram} />
+                    </a>
+                  </div>
+                  <div className="links">
+                    <a
+                      href="https://github.com/OluwamomiAkinbote"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <FontAwesomeIcon icon={faGithub} />
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
             <div className="message">
               <h3>Send message</h3>

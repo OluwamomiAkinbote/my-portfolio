@@ -1,0 +1,245 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Saira Condensed", sans-serif;
+} */
+
+.introduction {
+  padding: 7rem;
+}
+.introduction h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+.box-container {
+  display: flex;
+  justify-content: space-around;
+}
+.box-container .image {
+  background-color: var(--sup-bg-color);
+  max-width: 300px;
+  padding: 2rem;
+  overflow: hidden;
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.box-container .image img {
+  margin-top: 0;
+  scale: 1.2;
+}
+.box-container .about-content {
+  background-color: #ffecb3;
+  padding: 20px;
+  border-radius: 4px;
+  max-width: 500px;
+  font-size: 1.2rem;
+}
+.box-container .about-content p {
+  color: #6a1b9a;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.skill-progress-container {
+  border: 1px solid #ffecb3;
+}
+.skill-progress-container h3 {
+  font-size: 2.5rem;
+  text-align: center;
+  text-transform: capitalize;
+  margin: 20px;
+}
+
+.skill-set-container {
+  background-color: #ffecb3;
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem;
+}
+.skill-progress {
+  margin-bottom: 10px;
+}
+.skill-progress h2 {
+  color: #6a1b9a;
+  font-size: 1.5rem;
+}
+
+.progress-bar-container {
+  width: 100%;
+  height: 8px;
+  background-color: #600060;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: #e96b3a;
+  transition: width 0.5s;
+}
+
+.services {
+  padding: 2rem;
+}
+
+.services h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.services-box {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(calc(33.33% - 20px), 1fr));
+  justify-content: center;
+}
+
+.service-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--sup-bg-color);
+  border-radius: 8px;
+  padding: 20px;
+  margin: 10px;
+  max-width: 300px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.service-card:hover {
+  transform: scale(1.05);
+}
+.service-card h3 {
+  text-transform: capitalize;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  font-size: 1.5rem;
+}
+.service-card p {
+  font-size: 1.2rem;
+  text-align: left;
+  font-weight: 200;
+  color: #ffecb3;
+}
+
+.service-card .icon-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--sup-bg-color);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  color: var(--sup-text-two);
+}
+
+@media (max-width: 991px) {
+  .introduction {
+    padding: 5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .box-container {
+    display: flex;
+  }
+  .box-container .about-content {
+    background-color: #ffecb3;
+    padding: 18px;
+    border-radius: 4px;
+    max-width: 350px;
+    font-size: 0.8rem;
+  }
+
+  button {
+    padding: 6px 8px;
+    font-size: 0.8rem;
+  }
+  .skill-progress-container h3 {
+    font-size: 1.5rem;
+  }
+  .skill-set-container {
+    padding: 18px;
+    gap: 20px;
+  }
+  .skill-progress h2 {
+    color: #6a1b9a;
+    font-size: 1rem;
+  }
+
+  .skill-set-container {
+    align-items: center;
+  }
+
+  .services-box {
+    grid-template-columns: 2fr;
+  }
+}
+
+@media (max-width: 450px) {
+  .introduction {
+    padding: 1rem;
+  }
+  .introduction h2 {
+    padding-top: 3rem;
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 2rem;
+    font-weight: 600;
+  }
+
+  .box-container {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+  .box-container .about-content {
+    max-width: 250px;
+    font-size: 0.7rem;
+  }
+  .skill-progress-container h3 {
+    font-size: 1.2rem;
+  }
+  .skill-set-container {
+    padding: 10px;
+  }
+  .skill-progress h2 {
+    color: #6a1b9a;
+    font-size: 1rem;
+  }
+
+  .skill-set-container {
+    flex-direction: column;
+  }
+  .services-box {
+    grid-template-columns: 1fr;
+  }
+  .services-box {
+    gap: 10px;
+  }
+
+  .service-card {
+    padding: 15px;
+  }
+
+  .service-card h3 {
+    font-size: 1rem;
+  }
+
+  .service-card p {
+    font-size: 0.6rem;
+  }
+
+  .service-card .icon-box {
+    width: 25px;
+    height: 25px;
+  }
+}

@@ -7,14 +7,29 @@
   justify-content: space-around;
   align-items: center;
   color: var(--sup-bg-color);
+  transition: transform 0.3s ease-in-out;
+  animation: fadeIn 1s ease-in-out;
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .hero-content {
   max-width: 500px;
+  transition: transform 0.3s ease-in-out;
+}
+.hero:hover .hero-content {
+  transform: scale(1.1); /* Scale up the content on hover */
 }
 
 .hero-content h4 {
   font-size: 2rem;
+  transition: color 0.3s ease-in-out;
 }
 .hero-content h4 span {
   text-decoration: underline;
@@ -37,12 +52,24 @@
   max-width: 300px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+  margin-bottom: 10px;
 }
 
 .image img {
   margin-top: 30px;
   width: 100%;
   height: auto;
+  animation: scaleImage 2s infinite alternate;
+}
+
+@keyframes scaleImage {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.8);
+  }
 }
 
 .preview-sections {
@@ -62,9 +89,11 @@
   justify-content: space-around;
   margin: 20px 0;
   background-color: var(--main-bg-color);
+  transition: transform 0.3s ease-in-out;
 }
 .box .image {
   max-width: 300px;
+  transition: transform 0.3s ease-in-out;
 }
 .box .image img {
   width: 100%;
@@ -78,10 +107,12 @@
   font-size: 1.2rem;
   box-shadow: 0 0 10px rgba(170, 170, 34, 0.3);
   border-radius: 3px;
+  transition: box-shadow 0.3s ease-in-out;
 }
 
 .box .content p {
   margin-bottom: 15px;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .box .content a {
@@ -235,35 +266,6 @@
   margin: 0;
   font-size: 1.2rem;
 }
-.box-container .about-content .clicks {
-  display: flex;
-  gap: 20px;
-}
-.social-links {
-  display: flex;
-  margin-top: 2rem;
-  max-width: 400px;
-  padding: 1.8rem;
-  background-color: var(--sup-bg-color);
-}
-
-.social-links .links {
-  font-size: 1.2rem;
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
-  background-color: #6a1b9a;
-  text-align: center;
-  max-width: 300px;
-}
-.social-links .links a {
-  color: #ffecb3;
-  text-decoration: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 5px;
-}
 
 .message {
   margin: 0;
@@ -353,32 +355,74 @@ button:hover {
   .home {
     padding-top: 4rem;
   }
-  hero-content h4 {
-    font-size: 0.8rem;
-    margin-bottom: 5px;
-  }
-  .hero-content h2 {
-    font-size: 2rem;
-    margin: 0;
+  .hero {
+    display: flex;
+    justify-content: space-evenly;
   }
   .hero-content {
-    max-width: 300px;
+    max-width: 400px;
+    transition: transform 0.3s ease-in-out;
+  }
+  .hero:hover .hero-content {
+    transform: scale(0.9);
   }
 
+  .hero-content h4 {
+    font-size: 1.8rem;
+  }
+
+  .hero-content h2 {
+    font-size: 4rem;
+    margin: 0;
+  }
+  .hero-content h2 span {
+    font-size: 3.2rem;
+  }
+
+  .hero-content p {
+    font-size: 1.2rem;
+  }
+
+  .image {
+    max-width: 250px;
+  }
+
+  /* about */
   .heading {
-    font-size: 1rem;
+    font-size: 2rem;
   }
   .box {
-    padding-left: 30px;
-    padding-right: 30px;
+    justify-content: space-evenly;
+    margin: 20px 0;
   }
-  .box .content {
-    font-size: 0.8rem;
+  .box .image {
+    max-width: 250px;
+    transition: transform 0.3s ease-in-out;
+  }
+  .box .image img {
+    width: 100%;
+    height: auto;
   }
 
+  .box .content {
+    background-color: var(--sup-text-colour);
+    max-width: 350px;
+    padding: 20px;
+  }
+
+  .box .content p {
+    margin-bottom: 15px;
+    font-size: 1rem;
+    transition: opacity 0.3s ease-in-out;
+    font-weight: 500;
+  }
+
+  .box .content a {
+    font-size: 1.5rem;
+  }
+  /* about ends here */
   .heading-box {
     display: flex;
-
     margin-bottom: 20px;
   }
 
@@ -409,40 +453,38 @@ button:hover {
 }
 
 @media (max-width: 450px) {
-  .heading {
-    font-size: 0.5rem;
+  .home {
+    padding-top: 7rem;
   }
   .hero {
-    padding: 15px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
   }
-  hero-content h4 {
-    font-size: 0.5rem;
-    margin-bottom: 5px;
+  .hero-content {
+    max-width: 350px;
   }
+
+  .hero-content h4 {
+    font-size: 1.6rem;
+  }
+
   .hero-content p {
-    font-size: 0.8rem;
-  }
-  .hero-content h2 {
     font-size: 1.2rem;
-    margin: 0;
-  }
-  .hero {
-    flex-direction: column;
-    align-items: center;
   }
 
   .box {
     flex-direction: column;
     align-items: center;
   }
+  /* about */
+
   .box {
-    padding-left: 15px;
-    padding-right: 15px;
+    flex-direction: column-reverse;
+    align-items: center;
   }
 
-  .box .content {
-    font-size: 0.5rem;
-  }
+  /* about ends here */
   .project-container {
     grid-template-columns: 1fr;
     gap: 10px;

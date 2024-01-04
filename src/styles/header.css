@@ -76,6 +76,23 @@ nav {
 }
 
 @media only screen and (max-width: 768px) {
+  nav {
+    align-items: center;
+  }
+  .links {
+    display: flex;
+    gap: 12px;
+  }
+
+  .links a {
+    font-size: 1.2rem;
+    color: var(--sup-text-colour);
+    text-decoration: none;
+    font-weight: bold;
+  }
+}
+
+@media only screen and (max-width: 450px) {
   .links {
     display: none;
     flex-direction: column;
@@ -83,9 +100,14 @@ nav {
     position: absolute;
     top: 60px;
     left: 0;
-    background-color: var(--sup-bg-color);
+    background-color: var(--sup-text-two);
+    box-shadow: 0 2px 4px rgba(221, 169, 25, 0.1);
   }
-
+  .links a {
+    color: var(--sup-bg-color);
+    padding: 0.3rem;
+    font-size: 1.2rem;
+  }
   .links.open {
     display: flex;
   }

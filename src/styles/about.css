@@ -20,17 +20,19 @@
   display: flex;
   justify-content: space-around;
 }
-.box-container .image {
-  background-color: var(--sup-bg-color);
+.abt-img {
   max-width: 300px;
-  padding: 2rem;
+  /* width: 300px;
+  height: 300px; */
   overflow: hidden;
-  border-radius: 4px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  background-color: var(--sup-bg-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-.box-container .image img {
-  margin-top: 0;
-  scale: 1.2;
+
+.abt-img img {
+  width: 100%;
+  height: auto;
 }
 .box-container .about-content {
   background-color: #ffecb3;
@@ -38,13 +40,38 @@
   border-radius: 4px;
   max-width: 500px;
   font-size: 1.2rem;
+  font-weight: 500;
 }
 .box-container .about-content p {
   color: #6a1b9a;
   margin-bottom: 20px;
   text-align: left;
 }
+.clicks {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
 
+.social-links .about-links {
+  display: flex;
+  gap: 20px;
+  font-size: 1.2rem;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  background-color: #6a1b9a;
+  text-align: center;
+  max-width: 300px;
+}
+.social-links .about-links a {
+  color: #ffecb3;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+}
 .skill-progress-container {
   border: 1px solid #ffecb3;
 }
@@ -148,15 +175,40 @@
 }
 
 @media (max-width: 768px) {
+  .introduction {
+    padding: 7rem;
+  }
+
   .box-container {
     display: flex;
+    justify-content: space-evenly;
+    gap: 10px;
   }
+  .abt-img {
+    max-width: 300px;
+  }
+
+  .abt-img img {
+    width: 100%;
+    height: auto;
+  }
+
   .box-container .about-content {
-    background-color: #ffecb3;
-    padding: 18px;
-    border-radius: 4px;
-    max-width: 350px;
-    font-size: 0.8rem;
+    max-width: 300px;
+  }
+  .box-container .about-content p {
+    font-size: 1rem;
+  }
+  .clicks {
+    gap: 10px;
+  }
+
+  .social-links .about-links {
+    gap: 10px;
+    font-size: 1rem;
+    width: 25px;
+    height: 25px;
+    max-width: 250px;
   }
 
   button {
@@ -201,10 +253,10 @@
     justify-content: center;
     align-items: center;
   }
-  .box-container .about-content {
-    max-width: 250px;
-    font-size: 0.7rem;
+  .abt-img {
+    max-width: 300px;
   }
+
   .skill-progress-container h3 {
     font-size: 1.2rem;
   }

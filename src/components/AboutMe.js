@@ -5,8 +5,15 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faChartBar,
   faCode,
+  faComment,
   faDesktop,
 } from "@fortawesome/free-solid-svg-icons";
+import {
+  faFacebook,
+  faGithub,
+  faInstagram,
+  faLinkedinIn,
+} from "@fortawesome/free-brands-svg-icons";
 
 function AboutMe() {
   const handleDownload = () => {
@@ -69,7 +76,7 @@ function AboutMe() {
       <div className="introduction">
         <h2>About Me</h2>
         <div className="box-container">
-          <div className="image">
+          <div className="abt-img">
             <img src={aboutMe} alt="" />
           </div>
           <div className="about-content">
@@ -82,7 +89,56 @@ function AboutMe() {
               your digital presence!
             </p>
             <div className="clicks">
-              <button onClick={handleDownload}>Download CV</button>
+              <div>
+                <button onClick={handleDownload}>Download CV</button>
+              </div>
+              <div className="social-links">
+                <div className="about-links">
+                  <a
+                    href="https://www.linkedin.com/in/oluwamomi-akinbote"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FontAwesomeIcon icon={faLinkedinIn} />
+                  </a>
+                  <div className="about-links">
+                    <a
+                      href="https://wa.me/+2348149492012"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <FontAwesomeIcon icon={faComment} />
+                    </a>
+                  </div>
+                  <div className="about-links">
+                    <a
+                      href="https://www.facebook.com/Oluwamomiakinbote"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <FontAwesomeIcon icon={faFacebook} />
+                    </a>
+                  </div>
+                  <div className="about-links">
+                    <a
+                      href="https://www.instagram.com/maxonex7/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <FontAwesomeIcon icon={faInstagram} />
+                    </a>
+                  </div>
+                  <div className="about-links">
+                    <a
+                      href="https://github.com/OluwamomiAkinbote"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <FontAwesomeIcon icon={faGithub} />
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

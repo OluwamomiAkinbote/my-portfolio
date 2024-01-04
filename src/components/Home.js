@@ -12,18 +12,8 @@ import addToCart from "../images/add-to-cart (1).png";
 
 import todo from "../images/todo.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faPhone,
-  faEnvelope,
-  faComment,
-} from "@fortawesome/free-solid-svg-icons";
+import { faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faMapMarker } from "@fortawesome/free-solid-svg-icons";
-import {
-  faFacebook,
-  faGithub,
-  faInstagram,
-  faLinkedinIn,
-} from "@fortawesome/free-brands-svg-icons";
 
 const Home = () => {
   const projects = [
@@ -178,53 +168,6 @@ const Home = () => {
                   </div>
                 </div>
               ))}
-              <div className="social-links">
-                <div className="links">
-                  <a
-                    href="https://www.linkedin.com/in/oluwamomi-akinbote"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <FontAwesomeIcon icon={faLinkedinIn} />
-                  </a>
-                  <div className="links">
-                    <a
-                      href="https://wa.me/+2348149492012"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <FontAwesomeIcon icon={faComment} />
-                    </a>
-                  </div>
-                  <div className="links">
-                    <a
-                      href="https://www.facebook.com/Oluwamomiakinbote"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <FontAwesomeIcon icon={faFacebook} />
-                    </a>
-                  </div>
-                  <div className="links">
-                    <a
-                      href="https://www.instagram.com/maxonex7/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <FontAwesomeIcon icon={faInstagram} />
-                    </a>
-                  </div>
-                  <div className="links">
-                    <a
-                      href="https://github.com/OluwamomiAkinbote"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <FontAwesomeIcon icon={faGithub} />
-                    </a>
-                  </div>
-                </div>
-              </div>
             </div>
             <div className="message">
               <h3>Send message</h3>

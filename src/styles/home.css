@@ -1,5 +1,5 @@
 .home {
-  padding-top: 7rem;
+  padding-top: 5rem;
 }
 
 .hero {
@@ -35,17 +35,19 @@
   text-decoration: underline;
 }
 .hero-content h2 {
-  font-size: 4rem;
+  font-size: 3rem;
   margin: 0;
 }
 .hero-content h2 span {
   display: inline-block;
   color: var(--main-text-color);
-  padding-left: 10px;
+  padding-left: 8px;
 }
 
 .hero-content p {
   font-size: 1.2rem;
+  font-weight: 300;
+  margin-top: 10px;
 }
 
 .image {
@@ -198,8 +200,8 @@
 .project-card p {
   margin: 5px 0;
   color: var(--sup-bg-color);
-  font-size: 1.2rem;
-  font-weight: 400;
+  font-size: 1.1rem;
+  font-weight: 300;
   text-align: left;
 }
 
@@ -259,12 +261,12 @@
   flex-direction: column;
 }
 .link-content h4 {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 .link-content p {
   margin: 0;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .message {
@@ -282,7 +284,7 @@
 .message p {
   margin-bottom: 15px;
   max-width: 600px;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 .form-container {
   flex: 1;
@@ -360,7 +362,7 @@ button:hover {
     justify-content: space-evenly;
   }
   .hero-content {
-    max-width: 400px;
+    max-width: 450px;
     transition: transform 0.3s ease-in-out;
   }
   .hero:hover .hero-content {
@@ -372,15 +374,12 @@ button:hover {
   }
 
   .hero-content h2 {
-    font-size: 4rem;
+    font-size: 3rem;
     margin: 0;
-  }
-  .hero-content h2 span {
-    font-size: 3.2rem;
   }
 
   .hero-content p {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 
   .image {
@@ -436,19 +435,105 @@ button:hover {
   }
 
   .project-card h3 {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
 
   .project-card p {
-    font-size: 0.7rem;
+    font-size: 1rem;
+  }
+  .contact {
+    padding: 20px;
   }
 
-  .input {
+  .contact-heading {
+    font-size: 2rem;
+  }
+  .contact-container {
+    display: flex;
+  }
+  .contact-links {
+    max-width: 300px;
+  }
+
+  .contact-link-container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-bottom: 10px;
+    background-color: var(--sup-bg-color);
+    color: var(--sup-text-two);
+    padding: 10px;
+  }
+
+  .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--sup-text-colour);
+  }
+
+  .icon svg {
+    color: var(--sup-bg-color);
+    font-size: 1.1rem;
+  }
+
+  .link-content {
+    margin: 0;
+    display: flex;
     flex-direction: column;
   }
+  .link-content h4 {
+    font-size: 1.2rem;
+  }
+
+  .link-content p {
+    margin: 0;
+    font-size: 1.1rem;
+  }
+
+  .message {
+    padding: 0.8rem;
+    max-width: 400px;
+  }
+  .message h3 {
+    font-size: 1.5rem;
+  }
+
+  .message p {
+    font-size: 1.1rem;
+  }
+  .form-container {
+    flex: 1;
+  }
+  .input {
+    display: flex;
+  }
+
   input,
   textarea {
     width: 100%;
+    font-size: 1.1rem;
+  }
+  input::placeholder {
+    color: var(--sup-text-two);
+    text-transform: capitalize;
+  }
+  button {
+    padding: 10px 15px;
+    background-color: var(--sup-text-two);
+    color: #fff;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: var(--main-bg-color);
   }
 }
 
@@ -469,8 +554,17 @@ button:hover {
     font-size: 1.6rem;
   }
 
+  .hero-content h2 {
+    font-size: 2.5rem;
+    margin: 0;
+  }
+
   .hero-content p {
-    font-size: 1.2rem;
+    font-size: 0.8rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
   }
 
   .box {
@@ -495,14 +589,21 @@ button:hover {
   }
 
   .project-card h3 {
-    font-size: 0.8rem;
+    font-size: 1.1rem;
   }
 
   .project-card p {
-    font-size: 0.6rem;
+    font-size: 1rem;
   }
 
   .contact-container {
     flex-direction: column;
+  }
+  .input {
+    flex-direction: column;
+  }
+  input,
+  textarea {
+    width: 100%;
   }
 }

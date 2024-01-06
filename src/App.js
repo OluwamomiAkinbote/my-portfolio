@@ -15,7 +15,6 @@ function App() {
           <Route path="about" element={<AboutMe />} />
           <Route path="project" element={<Projects />} />
           <Route path="contact" element={<Contact />} />
-          {/* <Route path="*" element={<NoPage />} /> */}
         </Route>
       </Routes>
     </BrowserRouter>

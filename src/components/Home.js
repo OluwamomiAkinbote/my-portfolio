@@ -1,7 +1,8 @@
 // Home.js
 import React from "react";
 import { Link } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
+import emailjs from "@emailjs/browser";
 import TextTransition, { presets } from "react-text-transition";
 import "../styles/home.css";
 import hero from "../images/hero-edit.png";
@@ -16,6 +17,28 @@ import { faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faMapMarker } from "@fortawesome/free-solid-svg-icons";
 
 const Home = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_3zq89x5",
+        "template_hlqqtwa",
+        form.current,
+        "LFxMmZBzDDgxPBd3D"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          e.target.reset();
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
   const projects = [
     {
       title: "Real Estate",
@@ -176,14 +199,18 @@ const Home = () => {
                 Our team is here to help and looks forward to hearing from you
                 soon!
               </p>
-              <form action="">
+              <form ref={form} onSubmit={sendEmail}>
                 <div className="input">
-                  <input type="text" placeholder="Your Name" />
-                  <input type="text" placeholder="phone number" />
+                  <input type="text" name="user_name" placeholder="Your name" />
+                  <input
+                    type="text"
+                    name="phone_number"
+                    placeholder="phone number"
+                  />
                 </div>
                 <div className="input">
-                  <input type="email" placeholder="email" />
-                  <input type="text" placeholder="subject" />
+                  <input type="email" name="user_email" placeholder="email" />
+                  <input type="text" name="subject" placeholder="subject" />
                 </div>
                 <textarea
                   name="message"
@@ -192,8 +219,10 @@ const Home = () => {
                   rows="2"
                   placeholder="message..."
                 ></textarea>
+                <button type="submit" value="Send">
+                  send message
+                </button>
               </form>
-              <button>send message</button>
             </div>
           </div>
         </div>

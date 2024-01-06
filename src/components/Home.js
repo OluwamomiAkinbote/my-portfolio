@@ -18,6 +18,7 @@ import { faMapMarker } from "@fortawesome/free-solid-svg-icons";
 
 const Home = () => {
   const form = useRef();
+  const [isMessageSent, setMessageSent] = useState(false);
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -33,9 +34,11 @@ const Home = () => {
         (result) => {
           console.log(result.text);
           e.target.reset();
+          setMessageSent(true);
         },
         (error) => {
           console.log(error.text);
+          setMessageSent(false);
         }
       );
   };
@@ -199,6 +202,7 @@ const Home = () => {
                 Our team is here to help and looks forward to hearing from you
                 soon!
               </p>
+              {isMessageSent && <p>Your message has been sent successfully.</p>}
               <form ref={form} onSubmit={sendEmail}>
                 <div className="input">
                   <input type="text" name="user_name" placeholder="Your name" />

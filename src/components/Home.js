@@ -5,7 +5,7 @@ import { useState, useEffect, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import TextTransition, { presets } from "react-text-transition";
 import "../styles/home.css";
-import hero from "../images/hero-edit.png";
+import hero from "../images/hero-trans.png";
 import about from "../images/about-me-edit.png";
 import realEstate from "../images/real-estate.jpg";
 import calculator from "../images/calculator.png";
@@ -18,7 +18,6 @@ import { faMapMarker } from "@fortawesome/free-solid-svg-icons";
 
 const Home = () => {
   const form = useRef();
-  const [isMessageSent, setMessageSent] = useState(false);
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -34,11 +33,9 @@ const Home = () => {
         (result) => {
           console.log(result.text);
           e.target.reset();
-          setMessageSent(true);
         },
         (error) => {
           console.log(error.text);
-          setMessageSent(false);
         }
       );
   };
@@ -102,14 +99,11 @@ const Home = () => {
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
-    const intervalId = setInterval(
-      () => setIndex((index) => index + 1),
-      3000 // every 3 seconds
-    );
+    const intervalId = setInterval(() => setIndex((index) => index + 1), 3000);
     return () => clearTimeout(intervalId);
   }, []);
   return (
-    <div className="home">
+    <div className=" container home">
       <div className="hero">
         <div className="hero-content">
           <h4>
@@ -131,19 +125,19 @@ const Home = () => {
           </p>
         </div>
         <div className="image">
-          <img src={hero} alt="" />
+          <img src={hero} alt="" loading="lazy" />
         </div>
       </div>
       {/* about section start here */}
 
       <div className="preview-sections">
-        <div className="about-me">
+        <div className="home__abt">
           <h2 className="heading">About Me</h2>
-          <div className="box">
-            <div className="image">
-              <img src={about} alt="" />
+          <div className="home__abt-box">
+            <div className="home__abt-image">
+              <img src={about} alt="" loading="lazy" />
             </div>
-            <div className="content">
+            <div className="home__abt-content">
               <p>
                 Welcome to my digital space! I'm a web professional with a
                 passion for creating captivating online experiences. As an
@@ -161,8 +155,8 @@ const Home = () => {
 
         <div className="projects">
           <div className="heading-box">
-            <h2 className="headings">projects</h2>
-            <Link to="/project">View all</Link>
+            <h2 className="project__heading">projects</h2>
+            <a href="/project">view all</a>
           </div>
 
           <div className="project-container">
@@ -178,9 +172,8 @@ const Home = () => {
         </div>
 
         <div className="contact">
-          <div className="heading-box">
-            <h2 className="contact-heading">contact me</h2>
-          </div>
+          <h2 className="contact-heading">contact me</h2>
+
           <div className="contact-container">
             <div className="contact-link">
               {contacts.map((contact, index) => (
@@ -202,7 +195,7 @@ const Home = () => {
                 Our team is here to help and looks forward to hearing from you
                 soon!
               </p>
-              {isMessageSent && <p>Your message has been sent successfully.</p>}
+
               <form ref={form} onSubmit={sendEmail}>
                 <div className="input">
                   <input type="text" name="user_name" placeholder="Your name" />

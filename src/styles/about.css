@@ -1,33 +1,26 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap");
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: "Saira Condensed", sans-serif;
-} */
-
 .introduction {
   padding: 7rem;
 }
-.introduction h2 {
+.abt__heading {
+  color: var(--main-text-color);
   text-align: center;
   margin-bottom: 20px;
   font-size: 2.5rem;
   font-weight: 600;
+}
+.abt__heading:hover {
+  text-decoration: underline;
 }
 .box-container {
   display: flex;
   justify-content: space-around;
 }
 .abt-img {
-  max-width: 300px;
-  /* width: 300px;
-  height: 300px; */
+  max-width: 400px;
   overflow: hidden;
-  background-color: var(--sup-bg-color);
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(34px);
+  border: 1px solid rgba(175, 29, 117, 0.25);
 }
 
 .abt-img img {
@@ -35,24 +28,41 @@
   height: auto;
 }
 .box-container .about-content {
-  background-color: #ffecb3;
+  background-color: rgba(255, 255, 255, 0.15);
   padding: 20px;
+  border-radius: 12px;
+  box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.1),
+    -8px -8px 16px rgba(255, 255, 255, 0.5);
+
   border-radius: 4px;
-  max-width: 500px;
+  max-width: 700px;
   font-size: 1.2rem;
   font-weight: 500;
 }
 .box-container .about-content p {
-  color: #6a1b9a;
+  color: var(--sup-bg-color);
   margin-bottom: 20px;
   text-align: left;
+}
+.box-container .about-content p span {
+  font-weight: 700;
+  text-transform: uppercase;
 }
 .clicks {
   display: flex;
   gap: 20px;
   align-items: center;
 }
+.download__CV {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #6a1b9a;
+  border-radius: 5px;
+}
 
+.download__CV:hover {
+  background-color: var(--main-bg-color);
+}
 .social-links .about-links {
   display: flex;
   gap: 20px;
@@ -144,10 +154,12 @@
   transform: scale(1.05);
 }
 .service-card h3 {
+  color: var(--main-text-color);
   text-transform: capitalize;
   margin-bottom: 10px;
   margin-top: 10px;
   font-size: 1.5rem;
+  font-weight: 700;
 }
 .service-card p {
   font-size: 1.2rem;
@@ -180,12 +192,13 @@
   }
 
   .box-container {
-    display: flex;
-    justify-content: space-evenly;
-    gap: 10px;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
   }
   .abt-img {
-    max-width: 300px;
+    max-width: 500px;
   }
 
   .abt-img img {
@@ -194,7 +207,7 @@
   }
 
   .box-container .about-content {
-    max-width: 300px;
+    max-width: 600px;
   }
   .box-container .about-content p {
     font-size: 1rem;
@@ -241,12 +254,11 @@
   .introduction {
     padding: 1rem;
   }
-  .introduction h2 {
-    padding-top: 3rem;
+  .abt__heading {
+    padding-top: 5.2rem;
     text-align: center;
-    margin-bottom: 15px;
+    margin-bottom: 2rem;
     font-size: 2rem;
-    font-weight: 600;
   }
 
   .box-container {

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Outlet, Link } from "react-router-dom";
 import "../styles/header.css";
-import logo from "../images/logo.png";
+import logo from "../images/20240116_065043.png";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -27,9 +27,6 @@ const Header = () => {
             </Link>
             <Link to="/project" onClick={toggleMenu}>
               Projects
-            </Link>
-            <Link to="/contact" onClick={toggleMenu}>
-              Contact
             </Link>
           </div>
 

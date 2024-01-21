@@ -3,35 +3,22 @@ import aboutMe from "../images/about-me-trans.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import {
-  faChartBar,
+  faBullhorn,
   faCode,
   faComment,
   faDesktop,
+  faSearch,
+  faServer,
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faFacebook,
+  faFacebookSquare,
   faGithub,
   faInstagram,
   faLinkedinIn,
 } from "@fortawesome/free-brands-svg-icons";
 
 function AboutMe() {
-  const handleDownload = () => {
-    const googleDriveLink =
-      "https://drive.google.com/your-google-drive-link/view";
-
-    const downloadLink = `${googleDriveLink}&export=download`;
-
-    const link = document.createElement("a");
-    link.href = downloadLink;
-    link.download = "your-cv.pdf";
-
-    document.body.appendChild(link);
-    link.click();
-
-    document.body.removeChild(link);
-  };
-
   const skillsSet1 = [
     { name: "React Development", percentage: 65 },
     { name: "JavaScript", percentage: 70 },
@@ -52,21 +39,42 @@ function AboutMe() {
       icon: faDesktop,
       work: "web design",
       content: `
-      Revamp your online presence with expert web design services—WordPress, WooCommerce, Elementor, and more. I create visually stunning, tailored websites for your business success with a proven track record and ongoing support.
+      I specialize in utilizing CMS platforms like WordPress to design or redesign your blog, business, landing page, or portfolio website responsively. My goal is to create a professional online representation that aligns with your vision and brand.
       `,
     },
     {
       icon: faCode,
-      work: "web development",
+      work: "frontend development",
       content: `
-       Enhance your online presence with my comprehensive web development services. Specializing in proficient frontend and backend technologies, I craft dynamic and efficient web solutions. Collaborate with me for standout digital success.
+      Are you searching for a service that blends creativity with logic? Look no further! Utilizing frontend technologies such as HTML5, CSS3, React.js, Tailwind CSS, and Vite, I bring your client-side web design and development to vibrant life.
       `,
     },
     {
-      icon: faChartBar,
-      work: "digital marketing",
+      icon: faServer,
+      work: "backend development",
       content: `
-      Boost your brand with my digital marketing expertise. Specializing in targeted social media, SEO, and online presence optimization, I offer comprehensive services. Collaborate with me for a thriving digital presence
+     When it comes to web authentications, databases, stores, and ensuring overall security, rest assured that your website is in safe hands. I employ advanced backend logics integrated with Firebase.
+      `,
+    },
+    {
+      icon: faSearch,
+      work: "SEO",
+      content: `
+      In the ever-changing digital landscape, I specialize in SEO to enhance online visibility. Through strategic keyword optimization and technical SEO practices, I aim to elevate your website's ranking and stand out in online competition.
+      `,
+    },
+    {
+      icon: faBullhorn,
+      work: "Ads marketing",
+      content: `
+      I specialize in ads marketing, crafting targeted campaigns across platforms to boost your brand's reach. Using analytics and market insights, I optimize performance for maximum ROI with compelling messages and visuals tailored to your audience.
+      `,
+    },
+    {
+      icon: faFacebookSquare,
+      work: "social media mgt",
+      content: `
+      Specializing in social media management, I aim to build a strong online presence for your brand through content curation, community engagement, and data-driven strategies. My goal is to elevate your brand's impact across diverse platforms with shareable content and effective scheduling.
       `,
     },
   ];
@@ -74,23 +82,43 @@ function AboutMe() {
   return (
     <div className="about-section">
       <div className="introduction">
-        <h2>About Me</h2>
+        <h2 className="abt__heading">About Me</h2>
         <div className="box-container">
           <div className="abt-img">
-            <img src={aboutMe} alt="" />
+            <img src={aboutMe} alt="" lang="lazy" />
           </div>
           <div className="about-content">
             <p>
-              Hello, I'm Oluwamomi Akinbote, known in the digital space as
-              Maxonex. A versatile professional, I wear the hats of a web
-              designer, web developer, and digital marketer. With a passion for
-              crafting engaging online experiences, I bring creativity and
-              technical expertise to every project. Let's collaborate to elevate
-              your digital presence!
+              Hello, I'm <span>Oluwamomi Akinbote</span>, known in the digital
+              space as
+              <span> maxonex</span>, and I'm located in Lekki, Lagos State,
+              Nigeria. With 18 months of experience, I am an aspiring web expert
+              dedicated to crafting visually captivating and highly functional
+              websites.
             </p>
+            <p>
+              My motivation stems from a deep passion for exploring
+              cross-cultural aspects of web design and development, and I
+              continually stay abreast of the latest digital marketing
+              strategies through coursework and professional development.
+            </p>
+            <p>
+              Currently, I'm actively pursuing remote, full-time opportunities
+              to apply and enhance my skills in web development. My portfolio
+              showcases a passion for distinctive designs and user-friendly
+              functionality. Feel free to share your unique web projects or app
+              proposals—I'm eager to bring them to life!
+            </p>
+
             <div className="clicks">
-              <div>
-                <button onClick={handleDownload}>Download CV</button>
+              <div className="download__CV">
+                <a
+                  href="https://drive.google.com/file/d/1vzeov5w9ccrZazu_KdHLZzpN7Kfnm0Ed/view?usp=sharing"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Download CV
+                </a>
               </div>
               <div className="social-links">
                 <div className="about-links">
@@ -145,7 +173,7 @@ function AboutMe() {
       </div>
       {/* skills section */}
       <div className="skill-progress-container">
-        <h3>Proficiencies</h3>
+        <h2 className="abt__heading">Proficiencies</h2>
         <div className="skill-set-container">
           <div className="skill-set">
             {skillsSet1.map((skill) => (
@@ -182,7 +210,7 @@ function AboutMe() {
       </div>
 
       <div className="services">
-        <h2>Services</h2>
+        <h2 className="abt__heading">Services</h2>
         <div className="services-box">
           {services.map((service, index) => (
             <div key={index} className="service-card">

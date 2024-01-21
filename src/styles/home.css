@@ -1,5 +1,5 @@
 .home {
-  padding-top: 5rem;
+  padding-top: 7rem;
 }
 
 .hero {
@@ -52,10 +52,10 @@
 
 .image {
   max-width: 300px;
-  border-radius: 8px;
+  /* border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s ease-in-out;
-  margin-bottom: 10px;
+  margin-bottom: 10px; */
 }
 
 .image img {
@@ -65,18 +65,18 @@
   animation: scaleImage 2s infinite alternate;
 }
 
-@keyframes scaleImage {
+/* @keyframes scaleImage {
   from {
     transform: scale(1);
   }
   to {
     transform: scale(0.8);
   }
-}
+} */
 
 .preview-sections {
-  border-top: 1px solid white;
-  color: var(--sup-bg-color);
+  border-top: 1px solid var(--sup-bg-color);
+  padding-top: 2rem;
 }
 
 .heading {
@@ -86,38 +86,40 @@
   font-size: 2.5rem;
 }
 
-.box {
+.home__abt-box {
   display: flex;
   justify-content: space-around;
   margin: 20px 0;
-  background-color: var(--main-bg-color);
+  /* background-color: var(--main-bg-color); */
   transition: transform 0.3s ease-in-out;
 }
-.box .image {
+.home__abt-image {
   max-width: 300px;
   transition: transform 0.3s ease-in-out;
 }
-.box .image img {
+.home__abt-image img {
   width: 100%;
   height: auto;
 }
 
-.box .content {
-  background-color: var(--sup-text-colour);
+.home__abt-content {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(34px);
+  border: 1px solid rgba(175, 29, 117, 0.25);
   max-width: 500px;
   padding: 20px;
   font-size: 1.2rem;
-  box-shadow: 0 0 10px rgba(170, 170, 34, 0.3);
-  border-radius: 3px;
-  transition: box-shadow 0.3s ease-in-out;
+  /* box-shadow: 0 0 10px rgba(170, 170, 34, 0.3); */
+  /* transition: box-shadow 0.3s ease-in-out; */
 }
 
-.box .content p {
+.home__abt-content p {
   margin-bottom: 15px;
   transition: opacity 0.3s ease-in-out;
+  color: var(--sup-bg-color);
 }
 
-.box .content a {
+.home__abt-content a {
   color: var(--main-text-color);
   text-decoration: none;
   font-weight: bold;
@@ -126,10 +128,13 @@
 .box .content a:hover {
   text-decoration: underline;
 }
+/* ***********************************HOME PROJECT STYLING**************************************** */
 .projects {
-  background-color: var(--sup-bg-color);
+  background-color: rgba(255, 236, 179, 0.3);
   padding: 20px;
-  color: var(--sup-text-two);
+  border-radius: 16px;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .heading-box {
@@ -139,9 +144,9 @@
   margin-bottom: 20px;
 }
 
-.headings,
-.heading-box a {
-  mix-blend-mode: exclusion;
+.project__heading {
+  color: var(--sup-bg-color);
+  text-transform: capitalize;
 }
 
 .headings {
@@ -151,9 +156,10 @@
 }
 
 .heading-box a {
-  color: var(--sup-text-colour);
+  color: var(--sup-bg-color);
   text-decoration: none;
   font-weight: bold;
+  text-transform: capitalize;
 }
 
 .heading-box a:hover {
@@ -168,13 +174,9 @@
 
 .project-card {
   padding: 20px;
-  border: 1px solid #ccc;
   border-radius: 8px;
   background-color: var(--main-bg-color);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-.project-card:nth-child(odd) {
-  background-color: var(--sup-text-colour);
 }
 
 .project-card img {
@@ -208,17 +210,17 @@
 .project-card p:last-child {
   font-weight: bold;
 }
-
+/* ***********************************HOME CONTACT STYLING**************************************** */
 .contact {
   padding: 20px;
 }
 
 .contact-heading {
-  color: var(--main-text-color);
   text-transform: capitalize;
   font-size: 2.5rem;
   margin-bottom: 20px;
   text-align: center;
+  color: var(--main-text-color);
 }
 .contact-container {
   display: flex;
@@ -320,6 +322,7 @@ button {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  text-transform: capitalize;
 }
 
 button:hover {
@@ -390,33 +393,32 @@ button:hover {
   .heading {
     font-size: 2rem;
   }
-  .box {
+  .home__abt-box {
     justify-content: space-evenly;
     margin: 20px 0;
   }
-  .box .image {
+  .home__abt-image {
     max-width: 250px;
     transition: transform 0.3s ease-in-out;
   }
-  .box .image img {
+  .home__abt-image img {
     width: 100%;
     height: auto;
   }
 
-  .box .content {
-    background-color: var(--sup-text-colour);
+  .home__abt-content {
     max-width: 350px;
     padding: 20px;
   }
 
-  .box .content p {
+  .home__abt-content p {
     margin-bottom: 15px;
-    font-size: 1rem;
+    font-size: 0.9rem;
     transition: opacity 0.3s ease-in-out;
     font-weight: 500;
   }
 
-  .box .content a {
+  .home__abt-content a {
     font-size: 1.5rem;
   }
   /* about ends here */
@@ -567,13 +569,9 @@ button:hover {
     font-size: 1rem;
   }
 
-  .box {
-    flex-direction: column;
-    align-items: center;
-  }
   /* about */
 
-  .box {
+  .home__abt-box {
     flex-direction: column-reverse;
     align-items: center;
   }

@@ -6,7 +6,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  color: var(--sup-bg-color);
+
   transition: transform 0.3s ease-in-out;
   animation: fadeIn 1s ease-in-out;
 }
@@ -24,27 +24,30 @@
   transition: transform 0.3s ease-in-out;
 }
 .hero:hover .hero-content {
-  transform: scale(1.1); /* Scale up the content on hover */
+  transform: scale(1.1);
 }
 
 .hero-content h4 {
   font-size: 2rem;
   transition: color 0.3s ease-in-out;
+  color: var(--text-color-darker);
 }
 .hero-content h4 span {
   text-decoration: underline;
 }
 .hero-content h2 {
+  color: var(--text-color-darker);
   font-size: 3rem;
   margin: 0;
 }
 .hero-content h2 span {
   display: inline-block;
-  color: var(--main-text-color);
+  color: var(--btn-color);
   padding-left: 8px;
 }
 
 .hero-content p {
+  color: var(--text-color-darker);
   font-size: 1.2rem;
   font-weight: 300;
   margin-top: 10px;
@@ -52,10 +55,6 @@
 
 .image {
   max-width: 300px;
-  /* border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.3s ease-in-out;
-  margin-bottom: 10px; */
 }
 
 .image img {
@@ -75,13 +74,13 @@
 } */
 
 .preview-sections {
-  border-top: 1px solid var(--sup-bg-color);
+  border-top: 1px solid var(--text-color-darker);
   padding-top: 2rem;
 }
 
 .heading {
   text-align: center;
-  color: var(--main-text-color);
+  color: var(--btn-color);
   text-transform: capitalize;
   font-size: 2.5rem;
 }
@@ -90,7 +89,6 @@
   display: flex;
   justify-content: space-around;
   margin: 20px 0;
-  /* background-color: var(--main-bg-color); */
   transition: transform 0.3s ease-in-out;
 }
 .home__abt-image {
@@ -103,34 +101,37 @@
 }
 
 .home__abt-content {
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(34px);
-  border: 1px solid rgba(175, 29, 117, 0.25);
+  background: rgba(209, 210, 210, 0.7);
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   max-width: 500px;
   padding: 20px;
   font-size: 1.2rem;
-  /* box-shadow: 0 0 10px rgba(170, 170, 34, 0.3); */
-  /* transition: box-shadow 0.3s ease-in-out; */
 }
 
 .home__abt-content p {
   margin-bottom: 15px;
   transition: opacity 0.3s ease-in-out;
-  color: var(--sup-bg-color);
+  color: var(--bg-color-darker);
 }
 
 .home__abt-content a {
-  color: var(--main-text-color);
+  color: var(--bg-color-darker);
   text-decoration: none;
   font-weight: bold;
 }
 
-.box .content a:hover {
-  text-decoration: underline;
+.home__abt-content a:hover {
+  background: var(--bg-color-darker);
+  color: var(--text-color-darker);
+  padding: 8px;
+  border-radius: 4px;
+  outline: none;
 }
 /* ***********************************HOME PROJECT STYLING**************************************** */
 .projects {
-  background-color: rgba(255, 236, 179, 0.3);
+  background-color: var(--text-color-lighter);
   padding: 20px;
   border-radius: 16px;
   backdrop-filter: blur(5px);
@@ -145,18 +146,18 @@
 }
 
 .project__heading {
-  color: var(--sup-bg-color);
+  color: var(-bg-color-lighter);
   text-transform: capitalize;
 }
 
 .headings {
   margin: 0;
-  color: var(--sup-text-colour);
+  color: var(-bg-color-lighter);
   text-transform: capitalize;
 }
 
 .heading-box a {
-  color: var(--sup-bg-color);
+  color: var(--bg-color-darker);
   text-decoration: none;
   font-weight: bold;
   text-transform: capitalize;
@@ -175,7 +176,7 @@
 .project-card {
   padding: 20px;
   border-radius: 8px;
-  background-color: var(--main-bg-color);
+  background-color: var(--bg-color-lighter);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -196,12 +197,12 @@
 .project-card h3 {
   margin: 0;
   font-size: 1.5rem;
-  color: var(--main-text-color);
+  color: var(--btn-color);
 }
 
 .project-card p {
   margin: 5px 0;
-  color: var(--sup-bg-color);
+  color: var(--text-color-lighter);
   font-size: 1.1rem;
   font-weight: 300;
   text-align: left;
@@ -220,7 +221,7 @@
   font-size: 2.5rem;
   margin-bottom: 20px;
   text-align: center;
-  color: var(--main-text-color);
+  color: var(--btn-color);
 }
 .contact-container {
   display: flex;
@@ -236,8 +237,8 @@
   flex-direction: row;
   gap: 10px;
   margin-bottom: 10px;
-  background-color: var(--sup-bg-color);
-  color: var(--sup-text-two);
+  background-color: var(--text-color-darker);
+  color: var(--main-bg-color);
   padding: 10px;
 }
 
@@ -249,11 +250,11 @@
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  background-color: var(--sup-text-colour);
+  background-color: var(--bg-color-lighter);
 }
 
 .icon svg {
-  color: var(--sup-bg-color);
+  color: var(--text-color-lighter);
   font-size: 1.2rem;
 }
 
@@ -273,9 +274,9 @@
 
 .message {
   margin: 0;
-  background-color: var(--sup-bg-color);
+  background-color: var(--text-color-darker);
   padding: 10px;
-  color: var(--sup-text-two);
+  color: var(--bg-color-lighter);
   border-radius: 4px;
 }
 .message h3 {
@@ -301,7 +302,7 @@ input,
 textarea {
   padding: 10px;
   margin-bottom: 10px;
-  border: 1px solid var(--sup-text-two);
+  border: 1px solid var(--bg-color-lighter);
   border-radius: 5px;
   outline: none;
   width: 100%;
@@ -311,13 +312,13 @@ textarea {
   font-size: 1.2rem;
 }
 input::placeholder {
-  color: var(--sup-text-two);
+  color: var(--bg-color-lighter);
   text-transform: capitalize;
 }
 button {
   padding: 10px 15px;
-  background-color: var(--sup-text-two);
-  color: #fff;
+  background-color: var(--btn-color);
+  color: var(--bg-color-lighter);
   font-size: 1.2rem;
   border: none;
   border-radius: 5px;
@@ -326,7 +327,7 @@ button {
 }
 
 button:hover {
-  background-color: var(--main-bg-color);
+  background-color: var(--btn-hover);
 }
 
 @media (max-width: 991px) {

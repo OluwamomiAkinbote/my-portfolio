@@ -15,6 +15,7 @@ import todo from "../images/todo.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faMapMarker } from "@fortawesome/free-solid-svg-icons";
+import { motion } from "framer-motion";
 
 const Home = () => {
   const form = useRef();
@@ -103,9 +104,18 @@ const Home = () => {
     return () => clearTimeout(intervalId);
   }, []);
   return (
-    <div className=" container home">
+    <motion.div
+      className=" container home"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1, delay: 1 }}
+    >
       <div className="hero">
-        <div className="hero-content">
+        <motion.div
+          className="hero-content"
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+        >
           <h4>
             Hello, I'm <span>Oluwamomi</span>
           </h4>
@@ -123,7 +133,7 @@ const Home = () => {
             create engaging websites, track industry trends, and innovate
             digital projects.
           </p>
-        </div>
+        </motion.div>
         <div className="image">
           <img src={hero} alt="" loading="lazy" />
         </div>
@@ -224,7 +234,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

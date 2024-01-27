@@ -210,7 +210,7 @@ function AboutMe() {
       </div>
 
       <div className="services">
-        <h2 className="abt__heading">Services</h2>
+        <h2 className="abt__ heading">Services</h2>
         <div className="services-box">
           {services.map((service, index) => (
             <div key={index} className="service-card">

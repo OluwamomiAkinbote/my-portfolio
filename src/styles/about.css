@@ -2,7 +2,7 @@
   padding: 7rem;
 }
 .abt__heading {
-  color: var(--main-text-color);
+  color: var(--accent-color);
   text-align: center;
   margin-bottom: 20px;
   font-size: 2.5rem;
@@ -40,7 +40,7 @@
   font-weight: 500;
 }
 .box-container .about-content p {
-  color: var(--sup-bg-color);
+  color: var(--text-color-lighter);
   margin-bottom: 20px;
   text-align: left;
 }
@@ -50,32 +50,33 @@
 }
 .clicks {
   display: flex;
-  gap: 20px;
+  gap: 1rem;
   align-items: center;
 }
 .download__CV {
   padding: 10px 20px;
   font-size: 16px;
-  background-color: #6a1b9a;
+  background-color: var(--accent-color);
   border-radius: 5px;
+  color: var(--bg-color-lighter);
 }
 
 .download__CV:hover {
-  background-color: var(--main-bg-color);
+  background-color: var(--accent-hover);
 }
 .social-links .about-links {
   display: flex;
-  gap: 20px;
+  gap: 1rem;
   font-size: 1.2rem;
   border-radius: 50%;
   width: 30px;
   height: 30px;
-  background-color: #6a1b9a;
+  background-color: var(--accent-color);
   text-align: center;
   max-width: 300px;
 }
 .social-links .about-links a {
-  color: #ffecb3;
+  color: var(--bg-color-lighter);
   text-decoration: none;
   display: flex;
   justify-content: center;
@@ -83,9 +84,10 @@
   padding: 5px;
 }
 .skill-progress-container {
-  border: 1px solid #ffecb3;
+  border: 1px solid var(--text-color-lighter);
 }
 .skill-progress-container h3 {
+  color: var(--accent-color);
   font-size: 2.5rem;
   text-align: center;
   text-transform: capitalize;
@@ -93,7 +95,7 @@
 }
 
 .skill-set-container {
-  background-color: #ffecb3;
+  background-color: var(--text-color-lighter);
   display: flex;
   justify-content: space-around;
   padding: 2rem;
@@ -102,21 +104,21 @@
   margin-bottom: 10px;
 }
 .skill-progress h2 {
-  color: #6a1b9a;
+  color: var(--bg-color-lighter);
   font-size: 1.5rem;
 }
 
 .progress-bar-container {
   width: 100%;
   height: 8px;
-  background-color: #600060;
+  background-color: var(--bg-color-darker);
   border-radius: 5px;
   overflow: hidden;
 }
 
 .progress-bar {
   height: 100%;
-  background-color: #e96b3a;
+  background-color: var(--accent-hover);
   transition: width 0.5s;
 }
 
@@ -141,7 +143,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: 1px solid var(--sup-bg-color);
+  border: 1px solid var(--text-color-lighter);
   border-radius: 8px;
   padding: 20px;
   margin: 10px;
@@ -154,30 +156,30 @@
   transform: scale(1.05);
 }
 .service-card h3 {
-  color: var(--main-text-color);
+  color: var(--accent-hover);
   text-transform: capitalize;
   margin-bottom: 10px;
   margin-top: 10px;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: 700;
 }
 .service-card p {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   text-align: left;
-  font-weight: 400;
-  color: #ffecb3;
+  font-weight: 200;
+  color: var(--text-color-darker);
 }
 
 .service-card .icon-box {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--sup-bg-color);
+  background-color: var(--text-color-darker);
   width: 30px;
   height: 30px;
   border-radius: 50%;
   margin-bottom: 10px;
-  color: var(--sup-text-two);
+  color: var(--bg-color-darker);
 }
 
 @media (max-width: 991px) {

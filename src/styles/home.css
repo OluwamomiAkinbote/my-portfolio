@@ -42,7 +42,7 @@
 }
 .hero-content h2 span {
   display: inline-block;
-  color: var(--btn-color);
+  color: var(--accent-color);
   padding-left: 8px;
 }
 
@@ -80,7 +80,7 @@
 
 .heading {
   text-align: center;
-  color: var(--btn-color);
+  color: var(--accent-color);
   text-transform: capitalize;
   font-size: 2.5rem;
 }
@@ -197,7 +197,7 @@
 .project-card h3 {
   margin: 0;
   font-size: 1.5rem;
-  color: var(--btn-color);
+  color: var(--accent-color);
 }
 
 .project-card p {
@@ -221,7 +221,7 @@
   font-size: 2.5rem;
   margin-bottom: 20px;
   text-align: center;
-  color: var(--btn-color);
+  color: var(--accent-color);
 }
 .contact-container {
   display: flex;
@@ -317,7 +317,7 @@ input::placeholder {
 }
 button {
   padding: 10px 15px;
-  background-color: var(--btn-color);
+  background-color: var(--accent-color);
   color: var(--bg-color-lighter);
   font-size: 1.2rem;
   border: none;
@@ -327,7 +327,7 @@ button {
 }
 
 button:hover {
-  background-color: var(--btn-hover);
+  background-color: var(--accent-hover);
 }
 
 @media (max-width: 991px) {
@@ -463,8 +463,8 @@ button:hover {
     flex-direction: row;
     gap: 10px;
     margin-bottom: 10px;
-    background-color: var(--sup-bg-color);
-    color: var(--sup-text-two);
+    background-color: var(--text-color-darker);
+    color: var(--bg-color-darker);
     padding: 10px;
   }
 
@@ -476,11 +476,11 @@ button:hover {
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    background-color: var(--sup-text-colour);
+    background-color: var(--text-color-lighter);
   }
 
   .icon svg {
-    color: var(--sup-bg-color);
+    color: var(--bg-color-darker);
     font-size: 1.1rem;
   }
 
@@ -522,13 +522,13 @@ button:hover {
     font-size: 1.1rem;
   }
   input::placeholder {
-    color: var(--sup-text-two);
+    color: var(--text-color-darker);
     text-transform: capitalize;
   }
   button {
     padding: 10px 15px;
-    background-color: var(--sup-text-two);
-    color: #fff;
+    background-color: var(--accent-color);
+    color: var(--bg-color-darker);
     font-size: 1.2rem;
     border: none;
     border-radius: 5px;
@@ -536,7 +536,7 @@ button:hover {
   }
 
   button:hover {
-    background-color: var(--main-bg-color);
+    background-color: var(--accent-hover);
   }
 }
 

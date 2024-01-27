@@ -5,8 +5,8 @@
   --bg-color-lighter: #282d33;
   --text-color-darker: #d1d2d2;
   --text-color-lighter: #f3f4f4;
-  --btn-color: #fb8122;
-  --btn-hover: #e78332;
+  --accent-color: #fb8122;
+  --accent-hover: #e78332;
 }
 
 * {
@@ -22,7 +22,8 @@ a {
   text-decoration: none;
   display: inline-block;
   transition: background-color 0.3s;
-  color: var(--text-color-lighter);
+  color: var(--bg-color-lighter);
+  font-weight: bold;
 }
 /* **************************************FOOOTER**************************** */
 Footer {

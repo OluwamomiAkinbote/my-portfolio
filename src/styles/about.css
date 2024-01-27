@@ -59,6 +59,7 @@
   background-color: var(--accent-color);
   border-radius: 5px;
   color: var(--bg-color-lighter);
+  font-weight: bold;
 }
 
 .download__CV:hover {
@@ -219,7 +220,7 @@
   }
 
   .social-links .about-links {
-    gap: 10px;
+    gap: 0.5rem;
     font-size: 1rem;
     width: 25px;
     height: 25px;
@@ -238,7 +239,6 @@
     gap: 20px;
   }
   .skill-progress h2 {
-    color: #6a1b9a;
     font-size: 1rem;
   }
 
@@ -279,7 +279,6 @@
     padding: 10px;
   }
   .skill-progress h2 {
-    color: #6a1b9a;
     font-size: 1rem;
   }
 
@@ -302,7 +301,7 @@
   }
 
   .service-card p {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
 
   .service-card .icon-box {

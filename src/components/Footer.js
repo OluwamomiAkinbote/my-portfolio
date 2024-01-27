@@ -38,21 +38,21 @@ const Footer = () => {
           <h2>Follow Me</h2>
 
           <a
-            href="https://twitter.com"
+            href="https://wa.me/+2348149492012"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Twitter
+            Whatsapp
           </a>
           <a
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/in/oluwamomi-akinbote"
             target="_blank"
             rel="noopener noreferrer"
           >
             LinkedIn
           </a>
           <a
-            href="https://github.com"
+            href="https://github.com/OluwamomiAkinbote"
             target="_blank"
             rel="noopener noreferrer"
           >

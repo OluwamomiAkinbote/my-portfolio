@@ -238,7 +238,7 @@
   gap: 10px;
   margin-bottom: 10px;
   background-color: var(--text-color-darker);
-  color: var(--main-bg-color);
+  color: var(--bg-color-darker);
   padding: 10px;
 }
 
@@ -308,11 +308,11 @@ textarea {
   width: 100%;
   background-color: transparent;
   resize: none;
-  color: var(--main-bg-color);
+  color: var(--bg-bg-color-lighter);
   font-size: 1.2rem;
 }
 input::placeholder {
-  color: var(--bg-color-lighter);
+  color: var(--bg-color-darker);
   text-transform: capitalize;
 }
 button {
@@ -320,6 +320,7 @@ button {
   background-color: var(--accent-color);
   color: var(--bg-color-lighter);
   font-size: 1.2rem;
+  font-weight: bold;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -463,8 +464,6 @@ button:hover {
     flex-direction: row;
     gap: 10px;
     margin-bottom: 10px;
-    background-color: var(--text-color-darker);
-    color: var(--bg-color-darker);
     padding: 10px;
   }
 
@@ -476,11 +475,9 @@ button:hover {
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    background-color: var(--text-color-lighter);
   }
 
   .icon svg {
-    color: var(--bg-color-darker);
     font-size: 1.1rem;
   }
 
@@ -522,7 +519,6 @@ button:hover {
     font-size: 1.1rem;
   }
   input::placeholder {
-    color: var(--text-color-darker);
     text-transform: capitalize;
   }
   button {

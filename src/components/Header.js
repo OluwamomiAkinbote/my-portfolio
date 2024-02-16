@@ -60,7 +60,7 @@ const Header = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 3, delay: 3 }}
             >
-              <Link to="/project" onClick={toggleMenu}>
+              <Link to="/project/:id" onClick={toggleMenu}>
                 Projects
               </Link>
             </motion.div>

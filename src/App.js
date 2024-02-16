@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Home from "./components/Home";
 import AboutMe from "./components/AboutMe";
-import Projects from "./components/Projects";
+import ProjectDetails from "./components/ProjectDetails";
 
 import Footer from "./components/Footer";
 
@@ -14,7 +14,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<AboutMe />} />
-        <Route path="/project" element={<Projects />} />
+        <Route path="/project/:id" element={<ProjectDetails />} />
       </Routes>
 
       <Footer />

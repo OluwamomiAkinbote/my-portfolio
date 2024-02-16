@@ -1,0 +1,394 @@
+@media (max-width: 991px) {
+  /* **********************HERO SECTION************ */
+
+  .introduction {
+    padding: 5rem;
+  }
+}
+
+@media (max-width: 774px) {
+  .introduction {
+    padding: 7rem;
+  }
+
+  /* about starts here*/
+  .heading {
+    font-size: 2rem;
+  }
+  .home__abt-box {
+    justify-content: space-evenly;
+    margin: 20px 0;
+  }
+  .home__abt-image {
+    max-width: 250px;
+    transition: transform 0.3s ease-in-out;
+  }
+  .home__abt-image img {
+    width: 100%;
+    height: auto;
+  }
+
+  .home__abt-content {
+    max-width: 350px;
+    padding: 20px;
+  }
+
+  .home__abt-content p {
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+    transition: opacity 0.3s ease-in-out;
+    font-weight: 500;
+  }
+
+  .home__abt-content a {
+    font-size: 1.5rem;
+  }
+  /* about ends here */
+  /* *****************HERO SECTION STARTS************** */
+  .hero__container {
+    padding: 5rem 1.5rem;
+  }
+  .hero__box {
+    justify-content: space-evenly;
+  }
+  .hero__content {
+    max-width: 450px;
+    transition: transform 0.3s ease-in-out;
+  }
+  .hero:hover .hero__content {
+    transform: scale(0.9);
+  }
+
+  .hero__content h4 {
+    font-size: 1.8rem;
+    transition: color 0.3s ease-in-out;
+    color: var(--text-color-darker);
+  }
+  .hero__content h4 span {
+    text-decoration: underline;
+  }
+
+  .hero__content p {
+    font-size: 1rem;
+    font-weight: 200;
+  }
+  .hero__content h2 {
+    font-size: 2.5rem;
+  }
+  .hero__content h2 span {
+    font-size: 2.5;
+  }
+
+  .image {
+    max-width: 250px;
+  }
+  /* *****************HERO SECTION ENDS************** */
+
+  /* **********CONTACT SECTION STARTS HERE******** */
+
+  .contact {
+    padding: 20px;
+  }
+
+  .contact-heading {
+    font-size: 2rem;
+  }
+  .contact-container {
+    display: flex;
+  }
+  .contact-links {
+    max-width: 300px;
+  }
+
+  .contact-link-container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .icon svg {
+    font-size: 1.1rem;
+  }
+
+  .link-content {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .link-content h4 {
+    font-size: 1.2rem;
+  }
+
+  .link-content p {
+    margin: 0;
+    font-size: 1.1rem;
+  }
+
+  .message {
+    padding: 0.8rem;
+    max-width: 400px;
+  }
+  .message h3 {
+    font-size: 1.5rem;
+  }
+
+  .message p {
+    font-size: 1.1rem;
+  }
+  .form-container {
+    flex: 1;
+  }
+  .input {
+    display: flex;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    font-size: 1.1rem;
+  }
+  input::placeholder {
+    text-transform: capitalize;
+  }
+  .contact-btn {
+    padding: 9px 12px;
+    font-size: 1.1rem;
+    display: block;
+  }
+
+  /* **********CONTACT SECTION ENDS HERE*********** */
+  .box-container {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+  .abt-img {
+    max-width: 500px;
+  }
+
+  .abt-img img {
+    width: 100%;
+    height: auto;
+  }
+
+  .box-container .about-content {
+    max-width: 600px;
+  }
+  .box-container .about-content p {
+    font-size: 1rem;
+  }
+  .clicks {
+    gap: 10px;
+  }
+
+  .social-links .about-links {
+    gap: 0.5rem;
+    font-size: 1rem;
+    width: 25px;
+    height: 25px;
+    max-width: 250px;
+  }
+
+  button {
+    padding: 6px 8px;
+    font-size: 0.8rem;
+  }
+  .skill-progress-container h3 {
+    font-size: 1.5rem;
+  }
+  .skill-set-container {
+    padding: 18px;
+    gap: 20px;
+  }
+  .skill-progress h2 {
+    font-size: 1rem;
+  }
+
+  .skill-set-container {
+    align-items: center;
+  }
+
+  .services-box {
+    grid-template-columns: 2fr;
+    max-width: 300px;
+  }
+  /* projects details responsivesness */
+  .pjt__box {
+    max-width: 700px;
+  }
+  .pjt__heading {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  .pjt__images img {
+    width: 35rem;
+  }
+  .pjt__description {
+    font-size: 1.1rem;
+    max-width: 700px;
+  }
+  .pjt__tech {
+    max-width: 600px;
+    height: 300px;
+    padding: 1rem;
+  }
+  .tech__heading {
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .introduction {
+    padding: 1rem;
+  }
+
+  /* *****************HERO SECTION STARTS************** */
+  .hero__container {
+    padding: 6rem 1.5rem;
+  }
+  .hero__box {
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .hero__content {
+    max-width: 400px;
+  }
+  .hero:hover .hero__content {
+    transform: scale(0.9);
+  }
+
+  .hero__content h4 {
+    font-size: 1.6rem;
+  }
+
+  .hero__content p {
+    font-size: 0.9rem;
+    font-weight: 200;
+  }
+  .hero__content h2 {
+    font-size: 2.2rem;
+  }
+  .hero__content h2 span {
+    font-size: 2.2;
+  }
+
+  .image {
+    max-width: 250px;
+  }
+
+  /* *****************HERO SECTION ENDS************** */
+  /* **********HOME ABOUT ME STARTS HERE */
+  .home__abt-box {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  /* **********HOME ABOUT ME ENDS HERE */
+  /* ********************CONTACTS SECTION STARTS HERE****************** */
+  .contact-container {
+    flex-direction: column;
+  }
+  .input {
+    flex-direction: column;
+  }
+  input,
+  textarea {
+    width: 100%;
+  }
+  /* ********************CONTACTS SECTION ENDS HERE****************** */
+  /* ***********PROJECTS CARDS STARTS HERE******** */
+  .project-container {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .project-card {
+    padding: 10px;
+  }
+
+  .project-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .project-card p {
+    font-size: 1rem;
+  }
+  /* ***********PROJECTS CARDS ENDS HERE******** */
+  .abt__heading {
+    padding-top: 5.2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+  }
+
+  .box-container {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+  .abt-img {
+    max-width: 300px;
+  }
+
+  .skill-progress-container h3 {
+    font-size: 1.2rem;
+  }
+  .skill-set-container {
+    padding: 10px;
+  }
+  .skill-progress h2 {
+    font-size: 1rem;
+  }
+
+  .skill-set-container {
+    flex-direction: column;
+  }
+  .services-box {
+    grid-template-columns: 1fr;
+  }
+  .services-box {
+    gap: 10px;
+  }
+
+  .service-card {
+    padding: 15px;
+  }
+
+  .service-card h3 {
+    font-size: 1rem;
+  }
+
+  .service-card p {
+    font-size: 0.9rem;
+  }
+
+  .service-card .icon-box {
+    width: 25px;
+    height: 25px;
+  }
+  /* projects details responsivesness */
+  .pjt__box {
+    max-width: 700px;
+  }
+  .pjt__heading {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  .pjt__images img {
+    width: 20rem;
+  }
+  .pjt__description {
+    font-size: 0.9rem;
+    max-width: 500px;
+  }
+  .pjt__tech {
+    max-width: 600px;
+    height: 350px;
+    padding: 1rem;
+  }
+  .tech__heading {
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
+  }
+}
